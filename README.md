@@ -25,16 +25,16 @@
 
 ##  CI/CD Template
 ####  ภาพที่ 1: GitHub Actions Workflow สำหรับการ Deploy ไปยัง AWS ECR
-ภาพนี้แสดง **GitHub Actions workflow YAML file** ซึ่งกำหนดขั้นตอนในการสร้าง CI/CD pipeline เพื่อทำการ deploy Docker image ไปยัง **AWS ECR** โดย workflow จะทำงานเมื่อมีการ push ไปที่ `main` หรือ `dev` branches และประกอบไปด้วยขั้นตอนการเช็คเอาท์ repository, การตั้งค่าคุณสมบัติของ AWS, และการสร้าง, แท็ก, และผลักดัน Docker image ไปยัง ECR
+ภาพนี้แสดง **GitHub Actions workflow YML file** ซึ่งกำหนดขั้นตอนในการสร้าง CI/CD pipeline เพื่อทำการ deploy Docker image ไปยัง **AWS ECR** โดย workflow จะทำงานเมื่อมีการ push ไปที่ `main` หรือ `dev` branches และประกอบไปด้วยขั้นตอนการเช็คเอาท์ repository, การตั้งค่าคุณสมบัติของ AWS, การ build, การ tag, และการ push Docker image ไปยัง ECR
 ![GitHub Actions Workflow สำหรับการ Deploy ไปยัง AWS ECR](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/cicd%20template.png?raw=true)
 
 #### ภาพที่ 2: รายการภาพใน AWS Elastic Container Registry (ECR)
-ภาพนี้แสดงหน้า **Amazon ECR** ที่แสดงรายการภาพ Docker ที่ถูกเก็บไว้ใน ECR พร้อมแสดงแท็กของภาพ (เช่น `latest`) และเวลาที่อัปโหลดภาพแต่ละอัน ภาพแต่ละอันจะมี URI และ Digest ที่ไม่ซ้ำกันซึ่งใช้ระบุเวอร์ชันของแต่ละ Docker image
+ภาพนี้แสดงหน้า **Amazon ECR** ที่แสดงภาพรายการ Docker ที่ถูกเก็บไว้ใน Amazon ECR พร้อมแสดงแท็กของ Docker image (เช่น `latest`) และเวลาที่อัปโหลดภาพแต่ละอัน ภาพแต่ละอันจะมี URI และ Digest ที่ไม่ซ้ำกันซึ่งใช้ระบุเวอร์ชันของแต่ละ Docker image
 ![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/cicd%20template%20%E0%B8%82%E0%B8%B2%E0%B8%A7.png?raw=true)
 
 ## Deployment
 #### ภาพ 3: บันทึกการ Deploy ไปยัง AWS ECS
-ภาพนี้แสดง **บันทึกการทำงานใน GitHub Actions** สำหรับการ Deploy แอปพลิเคชันไปยัง **AWS ECS** โดยมีขั้นตอนต่าง ๆ รวมถึงการตั้งค่าคุณสมบัติ AWS, การสร้างและส่ง Docker image ไปยัง ECR และเสร็จสิ้นกระบวนการ deploy
+ภาพนี้แสดง **บันทึกการทำงานใน GitHub Actions** สำหรับการ Deploy แอปพลิเคชันไปยัง **AWS ECS** โดยมีขั้นตอนต่าง ๆ รวมถึงการตั้งค่าคุณสมบัติ AWS, การสร้างและส่ง Docker image ไปยัง Amazon ECR และเสร็จสิ้นกระบวนการ deploy
 ![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/deploy1.png?raw=true)
 
 
@@ -61,12 +61,12 @@
 
 
 ## Auto-scaling
-### 1.Scal Up
+### 1.Scaling Up
  #### ภาพ 9: กราฟการใช้งาน CPU ของ AWS EC2
 ภาพนี้แสดง **กราฟการใช้งาน CPU** ของ **AWS EC2 instance** ที่แสดงการเพิ่มขึ้นของการใช้งาน CPU เมื่อมีการทดสอบโหลด ระบบเริ่มแสดงให้เห็นถึงการใช้งาน CPU ที่สูงขึ้นตามปริมาณการรับส่งข้อมูล
 ![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/Scal%20up.png?raw=true)
 
-### 2.Scal Down
+### 2.Scaling. Down
 #### ภาพ 10: กราฟการลดการใช้งาน CPU หลังจากการปรับขนาดลง**
 ภาพนี้แสดงการ **ลดการใช้งาน CPU** หลังจากที่มีการปรับลดจำนวนผู้ใช้เสมือน (VUs) การใช้งาน CPU ลดลงเมื่อปริมาณการทดสอบลดลง แสดงถึงการปรับตัวของระบบเมื่อมีการลดปริมาณการรับส่งข้อมูล
 ![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/scale%20down.png?raw=true)
