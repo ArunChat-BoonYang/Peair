@@ -1,6 +1,6 @@
 # Deploy-Scale-MeUp
 
-โปรเจกต์นี้ใช้ AWS ในการ Deploy ระบบที่มีความสามารถในการขยายขนาดอัตโนมัติ โดยใช้ EC2, Lambda, หรือ Elastic Beanstalk
+โปรเจกต์นี้ใช้ AWS ในการ Deploy ระบบที่มีความสามารถในการขยายขนาดอัตโนมัติ โดยใช้ EC2, Auto-Scaling
 
 
 ## สารบัญ
@@ -23,11 +23,20 @@
 ## Architect
 
 ## CI/CD Template
+
 ![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/cicd%20template.png?raw=true)
 ![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/cicd%20template%20%E0%B8%82%E0%B8%B2%E0%B8%A7.png?raw=true)
-## Deployment
 
+## Deployment
+![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/deploy1.png?raw=true)
 ## Load test
+![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/L01.jpg?raw=true)
+![https://github.com/ArunChat-BoonYang/Peair/blob/main/image/L02.jpg?raw=true](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/L02.jpg?raw=true)
+![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/Bew1.jpg?raw=true)
+
+![https://github.com/ArunChat-BoonYang/Peair/blob/main/image/Bew2.jpg?raw=true](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/Bew2.jpg?raw=true)
+![https://github.com/ArunChat-BoonYang/Peair/blob/main/image/Bew3.jpg?raw=true](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/Bew3.jpg?raw=true)
+
 ## Auto-scaling
 1.Scal Up
 ![enter image description here](https://github.com/ArunChat-BoonYang/Peair/blob/main/image/Scal%20up.png?raw=true)
